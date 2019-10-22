@@ -12,32 +12,6 @@ DOM Elements
 - Start Over Button
 
 On Start button pressed
-- Run StartOver() --> initializes a new game object and runs game.start()
-
-// Create a class prototype, then 
-// create new games each time the user wants to play again
-game
-- Chooses 5 question objects and populates an array
-- statistics 
-- newQuestion()
-
-game.newQuestion()
-- If Questions array is empty, run endGame()
-- Makes sure content DOM element is unpopulated
-- Fills with options list
-- Choose a Question
-- Starts a timer
-- Creates All the necessary DOM Elements
-- Fills them with initial values
-- if timer hits 0 -> run game.onTimerUp()
-
-game.onTimerUp()
-- Change Question box to "Out of Time!"
-- Change options box to question and image (remove other dom elements like list)
-- Pop off question object from array 
-- Wait 5 seconds and run this.newQuestion()
-
-game.endGame()
-- Counter doesn't Start
-- Shows Statistics
-- Creates start over Button
+- reset values
+- questionChoice() - choose the number of values
+- questionView() -
