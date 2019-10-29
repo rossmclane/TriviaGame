@@ -1,14 +1,3 @@
-class Game {
-
-    correct = 0;
-    incorrect = 0;
-    unanswered = 0;
-
-    constructor(questionArray) {
-        this.questionArray = questionArray;
-    }
-}
-
 let questions = [
 
     {
@@ -80,14 +69,3 @@ let questions = [
     
 
 ]
-
-
-function generateRandomQuestions(){
-    const arr = [];
-    while (arr.length < 1){
-        let index = [Math.floor(Math.random() * questions.length)];
-        if (!(arr.includes(questions[index]))) {arr.push(questions[index])};
-    };
-
-    return arr;
-}

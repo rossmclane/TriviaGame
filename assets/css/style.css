@@ -1,27 +1,27 @@
 html, body {
     height: 100%;
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
 }
 
 body {
     background-image: url("../images/thumb-1920-13531.jpg");
 }
 
-.special {
-    background-color: bisque;
+.container {
+    background-color: rgb(223, 209, 91);
     margin-top: 100px;
+    width: 70%;
 }
 
 #game {
-    height: 500px;
-    margin: 20px;
-    /* border: hotpink 1px solid; */
+    /* display: flex; */
+    justify-content: center;
+    min-height: 200px;
 }
 
-h1{
+h1 {
     text-align: center;
-    margin-top: 15px;
-}
-
-.centered-button {
-    margin: 0 auto;
+    padding-top: 20px;
+    margin-bottom: 50px;
 }
