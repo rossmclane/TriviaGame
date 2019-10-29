@@ -22,11 +22,11 @@ function renderStart() {
         .css('width', '200px')
         .css('font-size', '30px')
         .text('Start').css('display', 'block')
-        .css('margin', '0 auto').attr('id','start-button');
+        .css('margin', '0 auto').attr('id', 'start-button');
 
     $("#game").append(startButton);
 
-    $("#start-button").on('click', function(){
+    $("#start-button").on('click', function () {
         console.log('Render Game!');
         renderGame();
     })
@@ -38,14 +38,27 @@ renderStart();
 // const question1 = $("<div>").text('Hello').css('text-align', 'center');
 // $("#game").append(question1);
 
-function renderGame(){
+function renderGame() {
     // Remove the Start Button
 
     $("#game").empty();
 
-    for (question of questions){
+    $("#game")
+
+    for (question of questions) {
         
-        let mcQuestion = $("<div>").addClass('question').text(question.prompt).css('text-align', 'center');
+        let mcQuestion = $("<div>").addClass('question').css('text-align', 'center').css('margin-bottom','40px');
+        let prompt = $("<div>").text(question.prompt);
+        mcQuestion.append(prompt);
+
+        for (let i = 0; i < 4; i++) {
+
+            let label = $("<label class='radio-inline'>")
+                .html(`<input type="radio" name="optradio"> ${question.possibleAnswers[i]}`)
+                .css('font-size','14px').css('margin-right','20px');
+
+            mcQuestion.append(label)
+        }
 
         $('#game').append(mcQuestion);
 
@@ -59,7 +72,7 @@ interval = setInterval(function () {
     if (gameTime === 0) {
         console.log('End of Game!');
         // clear interval
-        interval.clearInterval();
+        clearInterval(interval);
         // - renderResults
     } else {
         gameTime--;
