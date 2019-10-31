@@ -2,6 +2,14 @@
 
 Test your Beatles knowledge with this trivia game!
 
+<img src="assets/images/homepage.png"/>
+<br>
+<br>
+<img src="assets/images/game.png"/>
+<br>
+<br>
+<img src="assets/images/results.png"/>
+
 # Tools Used
 * Twitter Bootstrap
 * Jquery
